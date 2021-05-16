@@ -53,9 +53,11 @@ const Graphs = () => {
     () => {
       domNode.current.style.height = '85vh';
       domNode.current.style.width = '85vw';
-      domNode.current.style.border = "0px !important";
-      domNode.current.style.outline = '0px !important'; 
+      domNode.current.style.border = "none !important";
+      domNode.current.style.outline = 'none !important'; 
       domNode.current.style.margin = '20px auto';
+      domNode.current.style.tapHighlighColor = "rgba(255, 255, 255, 0)";
+      console.log(domNode.current);
       network.current = new Network(domNode.current, data, options);
     },
     [domNode, network, data, options]
