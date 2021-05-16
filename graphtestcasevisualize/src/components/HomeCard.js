@@ -25,7 +25,7 @@ export default function MediaCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/main/graphtestcasevisualize/src/components/logo.png?raw=true"
+          image="./logo.png"
           title="Contemplative Reptile"
         />
         <CardContent>
