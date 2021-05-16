@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import Home from '@material-ui/icons/Home';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,7 +65,9 @@ const Graphs = () => {
   );
   
   const classes = useStyles();
-
+  const history = useHistory();
+  const handleClick = () => history.push('/');
+  
   return (
     <>
       <div className={classes.root}>
@@ -76,6 +79,7 @@ const Graphs = () => {
           color="primary"
           className={classes.button}
           endIcon={<Home />}
+          onClick={handleClick}
         >
           Home
         </Button>
