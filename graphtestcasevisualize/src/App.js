@@ -7,21 +7,57 @@ import {
 } from "react-router-dom";
 import Graphs from './components/Graphs.js'
 import Home from './components/Home.js'
+import Particless from './components/Particless.js'
+
+
+const styles = {
+  root: {
+      fontFamily: "sans-serif",
+      textAlign: "center",
+      height: "100%",
+      background: "#222",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "100%",
+      // height: "100vh",
+      overflow: "hidden"
+  }
+};
+
 
 function App() {
   return (
-    <div className="App">
         <Router>
           <Switch>
             <Route path="/visualize">
               <Graphs />
             </Route>
             <Route path="/">
-              <Home />
+            <div style={styles.root}>
+                <Home 
+                  style={{
+                    position: "absolute",
+                    left: '0',
+                    right: '0',
+                    top: '0',
+                    bottom: '0',
+                    margin: 'auto',
+                    zIndex: 3,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100% !important",
+                    height: "100vh",
+                    background: 'transparent' 
+                  }}
+              />
+              <Particless />
+            </div>
             </Route>
           </Switch>
         </Router>
-    </div>
   );
 }
 

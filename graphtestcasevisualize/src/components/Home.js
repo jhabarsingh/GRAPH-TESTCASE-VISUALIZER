@@ -7,12 +7,7 @@ import HomeCard from './HomeCard.js'
 export default function SimpleContainer() {
   return (
     <React.Fragment>
-      <CssBaseline />
-      <Container style={{backgroundColor: "white"}}>
         <HomeCard />          
-      </Container>
     </React.Fragment>
   );
 }
-
-// looka.com for logo
