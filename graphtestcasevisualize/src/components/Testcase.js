@@ -18,6 +18,25 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import CloseIcon from '@material-ui/icons/Close';
 import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
+import FolderIcon from '@material-ui/icons/Folder';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+
+const data = [
+    "from to weighted"
+]
+function generate(element) {
+    return [0, 1, 2].map((value) =>
+        React.cloneElement(element, {
+        key: value,
+        }),
+    );
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,7 +98,9 @@ const Testcase = () => {
   const history = useHistory();
   const handleClick = () => history.push('/visualize');
   const [open, setOpen] = React.useState(false);
-
+  const [dense, setDense] = React.useState(false);
+  const [secondary, setSecondary] = React.useState(false);
+  console.log(data)
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -107,7 +128,7 @@ const Testcase = () => {
             }}
         >
             <center>
-                <Typography gutterBottom variant="h6" component="h2" col>
+                <Typography gutterBottom variant="h5" component="h2" col>
                     TESTCASE PARSER
                     <div 
                         style={{
@@ -120,27 +141,189 @@ const Testcase = () => {
                         </Button>
                         <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                            Modal title
+                                Valid Testcases
                             </DialogTitle>
                             <DialogContent dividers>
                             <Typography gutterBottom>
-                                Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-                                in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                To visualize the graph your testcase needs to be valid.
+                            </Typography>
+                            <Typography gutterBottom
+                                style={{
+                                    fontWeight: "bolder",
+                                    padding: "5px 0px",
+                                    textDecoration: "underline"
+                                }}
+                            >
+                                VALID TESTCASE:
                             </Typography>
                             <Typography gutterBottom>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-                                lacus vel augue laoreet rutrum faucibus dolor auctor.
-                            </Typography>
-                            <Typography gutterBottom>
-                                Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-                                scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
-                                auctor fringilla.
+                                <List>
+                                    <Typography gutterBottom variant="h6" component="div"
+                                                style={{
+                                                    display:"block",
+                                                    minWidth: "500px"
+                                                }}
+                                            >
+                                                Weighted Graph (U, V, W)
+                                    </Typography> 
+                                    <div>
+                                        <Paper
+                                            style={{
+                                            }}
+                                        >
+                                            <div
+                                                
+                                            >
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >   
+                                                    0
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    1
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    12
+                                                </span>
+                                            </div>
+                                            <div
+                                                
+                                            >
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >   
+                                                    1
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    2
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    23
+                                                </span>
+                                            </div>
+                                            <div
+                                                
+                                            >
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >   
+                                                    0
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    2
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    5
+                                                </span>
+                                            </div>
+                                        </Paper>
+                                    </div>
+                                </List>
+                                <List>
+                                    <Typography gutterBottom variant="h6" component="div"
+                                                style={{
+                                                    display:"block",
+                                                    minWidth: "500px"
+                                                }}
+                                            >
+                                                Unweighted Graph (U, V)
+                                    </Typography> 
+                                    <div>
+                                        <Paper
+                                            style={{
+                                            }}
+                                        >
+                                            <div
+                                                
+                                            >
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >   
+                                                    0
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    1
+                                                </span>
+                                            </div>
+                                            <div
+                                                
+                                            >
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >   
+                                                    1
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    2
+                                                </span>
+                                            </div>
+                                            <div
+                                                
+                                            >
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >   
+                                                    0
+                                                </span>
+                                                <span 
+                                                    style={{
+                                                        padding: "2px 5px"
+                                                    }}
+                                                >
+                                                    2
+                                                </span>
+                                            </div>
+                                        </Paper>
+                                    </div>
+                                </List>
+
                             </Typography>
                             </DialogContent>
                             <DialogActions>
-                            <Button autoFocus onClick={handleClose} color="primary">
-                                Save changes
-                            </Button>
                             </DialogActions>
                         </Dialog>
                     </div>
