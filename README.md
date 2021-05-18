@@ -3,7 +3,7 @@
 * <a href="https://codeforces.com/blog/entry/90433">Codeforces Blog Link</a>
 -->
 
-# [GRAPH-TESTCASE-VISUALIZER](https://codeforces-2313e.web.app/)  ⚡️ [![GitHub](https://img.shields.io/github/license/jhabarsingh/GRAPH-TESTCASE-VISUALIZER)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/jhabarsingh/GRAPH-TESTCASE-VISUALIZER)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/stargazers)  [![GitHub contributors](https://img.shields.io/github/contributors/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/graphs/contributors)  [![GitHub issues](https://img.shields.io/github/issues/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/issues) [![GitHub forks](https://img.shields.io/github/forks/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg?style=social&label=Fork)](https://GitHub.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/network/)
+# [GRAPH-TESTCASE-VISUALIZER](https://graph-testcases-visualizer.web.app/)  ⚡️ [![GitHub](https://img.shields.io/github/license/jhabarsingh/GRAPH-TESTCASE-VISUALIZER)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/jhabarsingh/GRAPH-TESTCASE-VISUALIZER)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/stargazers)  [![GitHub contributors](https://img.shields.io/github/contributors/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/graphs/contributors)  [![GitHub issues](https://img.shields.io/github/issues/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/issues) [![GitHub forks](https://img.shields.io/github/forks/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg?style=social&label=Fork)](https://GitHub.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/network/)
 
 <p align="center">
   <img src="https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/main/public/codeforces_icon.png?raw=true" />
@@ -22,7 +22,7 @@
   
 
 ## About 
-  [GRAPH-TESTCASE-VISUALIZER](https://codeforces-2313e.web.app/) is a Web  app built using Vuejs and Codeforces Apis. It provides many functionalities:-
+  [GRAPH-TESTCASE-VISUALIZER](https://graph-testcases-visualizer.web.app/) is a Web  app built using Vuejs and Codeforces Apis. It provides many functionalities:-
   1. **Practice** the questions that are done by another user.
   3. **Highlights** the **Common Questions** solved by you as well as the another user.
   
