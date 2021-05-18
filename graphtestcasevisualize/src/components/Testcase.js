@@ -143,7 +143,9 @@ const Testcase = () => {
                         <Button variant="contained" color="primary" onClick={handleClickOpen}>
                             Instructions
                         </Button>
-                        <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+                        <Dialog 
+                            onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}
+                        >
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
                                 Valid Testcases
                             </DialogTitle>
@@ -161,7 +163,8 @@ const Testcase = () => {
                                 VALID TESTCASE:
                             </Typography>
                             <Typography gutterBottom>
-                                <List>
+                                <List
+                                >
                                     <Typography gutterBottom variant="h6" component="div"
                                                 style={{
                                                     display:"block",
@@ -174,6 +177,7 @@ const Testcase = () => {
                                         <Paper
                                             style={{
                                             }}
+                                            elevation={3}
                                         >
                                             <div
                                                 
@@ -266,6 +270,7 @@ const Testcase = () => {
                                         <Paper
                                             style={{
                                             }}
+                                            elevation={3}
                                         >
                                             <div
                                                 
