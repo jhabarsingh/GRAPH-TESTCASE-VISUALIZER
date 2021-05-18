@@ -146,13 +146,20 @@ const Testcase = () => {
                         <Dialog 
                             onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}
                         >
-                            <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Valid Testcases
+                            <DialogTitle id="customized-dialog-title" onClose={handleClose}
+			    	style={{
+			  	    fontWeight: "bold",
+				    fontFamily: "ubunutu"
+				}}
+                            >
+                                <center> <b style={{fontSize: "21px" }}> VALID TESTCASES </b> </center>
                             </DialogTitle>
                             <DialogContent>
                             <Typography gutterBottom>
-                                To visualize the graph your testcase needs to be valid.
-                            </Typography>
+                                <i>
+					To visualize the graph your testcase needs to be valid.
+                            	</i>
+			    </Typography>
                             <Typography gutterBottom
                                 style={{
                                     fontWeight: "bolder",
