@@ -30,28 +30,6 @@ const Graphs = () => {
  
   const network = useRef(null);
 
-  // An array of nodes
-  // const nodes = new DataSet([
-  //   { id: 1, label: '1' },
-  //   { id: 2, label: '2' },
-  //   { id: 3, label: '3' },
-  //   { id: 4, label: '4' },
-  //   { id: 5, label: '5' }
-  // ]);
-
-  // // An array of edges
-  // const edges = new DataSet([
-  //   { from: 1, to: 3,  label: "122", font: { strokeWidth: 10 } },
-  //   { from: 1, to: 2 , label: "12", font: { strokeWidth: 10 } },
-  //   { from: 2, to: 4 , label: "12", font: { strokeWidth: 10 } },
-  //   { from: 2, to: 5 , label: "12", font: { strokeWidth: 10 } }
-  // ]);
-
-  // const data = {
-  //   nodes,
-  //   edges
-  // };
-
   
   useEffect(
     () => {
