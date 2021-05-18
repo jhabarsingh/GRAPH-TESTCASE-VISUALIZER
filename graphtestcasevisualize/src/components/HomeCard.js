@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 export default function MediaCard() {
   const classes = useStyles();
   const history = useHistory();
-  const handleClick = () => history.push('/visualize');
+  const handleClick = () => history.push('/testcase');
 
 
   return (

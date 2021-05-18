@@ -26,7 +26,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import FolderIcon from '@material-ui/icons/Folder';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-
+import Parser from './Parser.js'
 const data = [
     "from to weighted"
 ]
@@ -330,7 +330,7 @@ const Testcase = () => {
                 </Typography>
             </center>
             <center>
-            
+                <Parser />
             </center>
         </Card>       
       </div>
