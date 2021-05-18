@@ -27,6 +27,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import FolderIcon from '@material-ui/icons/Folder';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Parser from './Parser.js'
+import DialogContentText from '@material-ui/core/DialogContentText';
+
+
 const data = [
     "from to weighted"
 ]
@@ -96,15 +99,66 @@ const Testcase = () => {
   
   const classes = useStyles();
   const history = useHistory();
+  
   const handleClick = () => {
-      if(!localStorage.getItem("text")) return false;
-      
+      if(!localStorage.getItem("text")) {
+        setAlert(true);
+        return;
+      }
+      let text = localStorage.getItem("text").trim();
+      let n = text.length;
+
+      if(n == 0) {
+          setAlert(true);
+          return;
+      }
+
+      let temp = text.split(/\r?\n/);
+      n = temp.length;
+      let flag = -1;
+      let graph = [];
+
+      for(let i=0; i<n; i++) {
+        let p = temp[i].trim().split(/\s+/);
+        console.log(p)
+        if(temp[i].trim().length == 0) continue;
+        if(p.length != 2 && p.length != 3) {
+            setAlert(true);
+            return;
+        }
+        else {
+            if(flag != -1) {
+                if(p.length != flag) {
+                    setAlert(true);
+                    return;
+                }
+                else {
+                    graph.push(p);
+                }
+            }
+            else {
+                graph.push(p);
+                flag = p.length;
+            }
+        }
+      }
+      console.log(graph);
       history.push('/visualize')
   };
   const [open, setOpen] = React.useState(false);
   const [dense, setDense] = React.useState(false);
   const [secondary, setSecondary] = React.useState(false);
-  console.log(data)
+
+  const [alert, setAlert] = React.useState(false);
+
+  const handleAlertOpen = () => {
+    setAlert(true);
+  };
+
+  const handleAlertClose = () => {
+    setAlert(false);
+  };
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -119,6 +173,10 @@ const Testcase = () => {
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
+
+  useEffect(() => {
+    localStorage.removeItem("text");
+  }, []);
 
   return (
     <>
@@ -382,6 +440,24 @@ const Testcase = () => {
         >
           Visualize
         </Button>
+        <Dialog
+            open={alert}
+            onClose={handleAlertClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+        >
+            <DialogTitle id="alert-dialog-title">{"Invalid Testcases"}</DialogTitle>
+            <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+                Click on the instruction button to know more
+            </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+            <Button onClick={handleAlertClose} color="primary" autoFocus>
+                Ok
+            </Button>
+            </DialogActions>
+        </Dialog>
       </center>
     </>
   );
