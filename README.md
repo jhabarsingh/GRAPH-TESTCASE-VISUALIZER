@@ -30,7 +30,6 @@
  
  ![GIF](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/main/docs/main_compressed.gif?raw=true)
  
-  ## ScreenShots
   
  ![Home Page](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/main/docs/home.png?raw=true)
  
