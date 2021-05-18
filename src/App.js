@@ -9,6 +9,7 @@ import Graphs from './components/Graphs.js'
 import Home from './components/Home.js'
 import Particless from './components/Particless.js'
 import Testcase from './components/Testcase.js'
+import NotFound from './components/NotFound.js'
 
 const styles = {
   root: {
@@ -31,14 +32,16 @@ function App() {
   return (
         <Router>
           <Switch>
-            <Route path="/testcase">
+
+
+            <Route path="/testcase" exact>
               <Testcase />
             </Route>
             
-            <Route path="/visualize">
+            <Route path="/visualize" exact>
               <Graphs />
             </Route>
-            <Route path="/">
+            <Route path="/" exact>
             <div style={styles.root}>
                 <Home 
                   style={{
@@ -65,6 +68,9 @@ function App() {
                 }}
               />
             </div>
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </Router>
