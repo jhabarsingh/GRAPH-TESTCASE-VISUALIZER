@@ -6,7 +6,7 @@
 # [GRAPH-TESTCASE-VISUALIZER](https://graph-testcases-visualizer.web.app/)  ⚡️ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/main/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/jhabarsingh/GRAPH-TESTCASE-VISUALIZER)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/stargazers)  [![GitHub contributors](https://img.shields.io/github/contributors/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/graphs/contributors)  [![GitHub issues](https://img.shields.io/github/issues/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg)](https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/issues) [![GitHub forks](https://img.shields.io/github/forks/jhabarsingh/GRAPH-TESTCASE-VISUALIZER.svg?style=social&label=Fork)](https://GitHub.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/network/)
 
 <p align="center">
-  <img src="https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/main/public/graph_testcase_visualizer.png?raw=true" />
+  <img width="300px" src="https://github.com/jhabarsingh/GRAPH-TESTCASE-VISUALIZER/blob/main/public/graph_testcase_visualizer.png?raw=true" />
 </p>
 <details>
   <summary>:zap: TECH STACK</summary>
