@@ -52,7 +52,6 @@ const Graphs = () => {
   //   edges
   // };
 
-  const options = {}
   
   useEffect(
     () => {
@@ -68,13 +67,31 @@ const Graphs = () => {
       const node = new DataSet(nodes);
       const edge = new DataSet(edges);
     
-    const data = {
-      "nodes": node,
-      "edges": edge
-    }
+      const data = {
+        "nodes": node,
+        "edges": edge
+      }
+      let options = {};
+
+      if(!localStorage.getItem("checked")) {
+
+      }
+      else {
+        if(localStorage.getItem("checked") == "true") {
+          options = {
+            edges: {
+              arrows: {
+                to: { enabled: true, scaleFactor: 1, type: "arrow" },
+                middle: { enabled: false, scaleFactor: 1, type: "arrow" },
+                from: { enabled: false, scaleFactor: 1, type: "arrow" }
+              }
+            }
+          }
+        }
+      }
       network.current = new Network(domNode.current, data, options);
     },
-    [domNode, network, edges, options]
+    [domNode, network, edges]
   );
 
   useEffect(() => {
