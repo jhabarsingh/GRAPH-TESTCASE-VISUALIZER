@@ -31,6 +31,10 @@ function App() {
   return (
         <Router>
           <Switch>
+            <Route path="/testcase">
+              <Testcase />
+            </Route>
+            
             <Route path="/visualize">
               <Graphs />
             </Route>
