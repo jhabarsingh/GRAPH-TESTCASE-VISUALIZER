@@ -21,7 +21,7 @@ const styles = {
       justifyContent: "center",
       alignItems: "center",
       width: "100%",
-      // height: "100vh",
+      height: "100vh",
       overflow: "hidden"
   }
 };
@@ -44,16 +44,22 @@ function App() {
                     top: '0',
                     bottom: '0',
                     margin: 'auto',
-                    zIndex: 3,
+                    zIndex: 5,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     width: "100% !important",
-                    height: "100vh",
+                    height: "100vh !important",
                     background: 'transparent' 
                   }}
               />
-              <Particless />
+              <Particless 
+                style={{
+                  position: "absolute",
+                  height: "100vh",
+                  top: "0px"
+                }}
+              />
             </div>
             </Route>
           </Switch>

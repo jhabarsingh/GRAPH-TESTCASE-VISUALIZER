@@ -1,12 +1,32 @@
+import React, { useEffect, useRef } from 'react';
 import Particles from 'react-particles-js';
 
 export default function  Particless() {
+    const stageCanvasRef = useRef(null);
+
+    // useEffect will run on stageCanvasRef value assignment
+    useEffect( () => {
+
+        // The 'current' property contains info of the reference:
+        // align, title, ... , width, height, etc.
+        if(stageCanvasRef.current){
+            document.querySelector(".MuiPaper-root").height = "100vh";
+        }
+
+    }, [stageCanvasRef]);
+
     return (
         <Particles
-            width='100%' height="100vh"
+            className="meghna"
+            ref = {stageCanvasRef}
+    
+            width="100%" 
+            height="100vh"
             style={{
                 overflow: "hidden",
-                height: "100vh"
+                position: "absolute",
+                top: "0px",
+                bottom: "0px"
             }}
             params={{
                 "particles": {

@@ -39,10 +39,11 @@ export default function MediaCard() {
       >
           <center>
             <img 
+                className="logohaimera"
                 src="./graph_testcase_visualizer.png"  
                 style={{
                     borderRadius: '20px',
-                    width: '350px',
+                    width: '300px',
                     margin: "auto"
                 }}
             />
@@ -55,6 +56,12 @@ export default function MediaCard() {
                 size="Large"
                 className={classes.button}
                 onClick={handleClick}
+
+                style={{
+                  position: "relative",
+                  zIndex: 2,
+                  borderRadius: "20px"
+                }}
             >
                 Get Started
             </Button>
