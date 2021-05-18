@@ -468,4 +468,3 @@ const Testcase = () => {
 export default Testcase;
 
 
-// https://visjs.github.io/vis-network/examples/
