@@ -21,7 +21,7 @@
   
 
 ## About 
-  [GRAPH-TESTCASE-VISUALIZER](https://graph-testcases-visualizer.web.app/) is a Web  app built using Reactjs. It has following functionalities:-
+  [GRAPH-TESTCASE-VISUALIZER](https://graph-testcases-visualizer.web.app/) is a Web  app built using **Reactjs**. It has following functionalities:-
   1. Visulalize **Graph**, **Tree**, **Linked List**, **Disjoint set**, etc.
   2. Visualize **Weighted** as well as **Unweighted** Graphs.
   3. Copy the **testcases** from **ONLINE JUDGES** paste in the [**PARSER**](https://graph-testcases-visualizer.web.app/testcase) present int the website to get the **Visualized Graph**.
