@@ -204,6 +204,3 @@ const Graphs = () => {
 };
 
 export default Graphs;
-
-
-// https://visjs.github.io/vis-network/examples/
