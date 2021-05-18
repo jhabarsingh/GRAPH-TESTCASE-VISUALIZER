@@ -165,17 +165,15 @@ const Graphs = () => {
         let obj = {
 
         }
-        graph.forEach(e => {
-          obj.from = map.get(e[0]);
-          obj.to = map.get(e[1]);
-          obj.label = e[2];
-          obj.font = {
-            strokeWidth: 10
-          }
-          obj.id = t;
-          t++;
-          edge.push(obj);
-        })
+        obj.from = map.get(e[0]);
+        obj.to = map.get(e[1]);
+        obj.label = e[2];
+        obj.font = {
+          strokeWidth: 10
+        }
+        obj.id = t;
+        t++;
+        edge.push(obj);
       })
     }
 
