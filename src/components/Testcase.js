@@ -167,15 +167,17 @@ const Testcase = () => {
   };
 
   const [state, setState] = React.useState({
-    checkedB: true,
+    checkedB: false,
   });
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
-  };
+    localStorage.setItem("checked", event.target.checked);
+};
 
   useEffect(() => {
     localStorage.removeItem("text");
+    localStorage.setItem("checked", false);
   }, []);
 
   return (
