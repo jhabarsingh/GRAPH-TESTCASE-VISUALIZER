@@ -24,11 +24,12 @@ export default function Parser() {
         rowsMax={4}
         style={{
             width: "100%",
-            height: "70vh",
+            height: "67vh",
             border: "none",
             outline: "none",
             fontWeight: "normal",
-            letterSpacing: "5px"
+            letterSpacing: "5px",
+            padding: "5px"
         }}
         onChange={handleInputChange} value={inputs}
         aria-label="maximum height"
