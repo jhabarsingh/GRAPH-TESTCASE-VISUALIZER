@@ -9,10 +9,11 @@ export default function Parser() {
   const [inputs, setInputs] = useState();
  
   const handleInputChange = (event) => {
-    event.persist();
-    setInputs(inputs => event.target.value);
+    // event.persist();
+    console.log(event.target.value)
+    setInputs(event.target.value);
     
-    localStorage.setItem("text", inputs)
+    localStorage.setItem("text", event.target.value)
   }
 
   return (
