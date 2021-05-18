@@ -96,7 +96,11 @@ const Testcase = () => {
   
   const classes = useStyles();
   const history = useHistory();
-  const handleClick = () => history.push('/visualize');
+  const handleClick = () => {
+      if(!localStorage.getItem("text")) return false;
+      
+      history.push('/visualize')
+  };
   const [open, setOpen] = React.useState(false);
   const [dense, setDense] = React.useState(false);
   const [secondary, setSecondary] = React.useState(false);
@@ -143,7 +147,7 @@ const Testcase = () => {
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
                                 Valid Testcases
                             </DialogTitle>
-                            <DialogContent dividers>
+                            <DialogContent>
                             <Typography gutterBottom>
                                 To visualize the graph your testcase needs to be valid.
                             </Typography>
