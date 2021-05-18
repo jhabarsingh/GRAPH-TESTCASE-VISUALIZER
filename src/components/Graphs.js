@@ -24,35 +24,36 @@ const Graphs = () => {
   // A reference to the div rendered by this component
   const domNode = useRef(null);
   
-  const[graphs, setGraphs] = React.useState([]);
-
-  // A reference to the vis network instance
+  const [graphs, setGraphs] = React.useState([]);
+  const [nodes, setNodes] = React.useState([]);
+  const [edges, setEdges] = React.useState([]);
+ 
   const network = useRef(null);
 
   // An array of nodes
-  const nodes = new DataSet([
-    { id: 1, label: '1' },
-    { id: 2, label: '2' },
-    { id: 3, label: '3' },
-    { id: 4, label: '4' },
-    { id: 5, label: '5' }
-  ]);
+  // const nodes = new DataSet([
+  //   { id: 1, label: '1' },
+  //   { id: 2, label: '2' },
+  //   { id: 3, label: '3' },
+  //   { id: 4, label: '4' },
+  //   { id: 5, label: '5' }
+  // ]);
 
-  // An array of edges
-  const edges = new DataSet([
-    { from: 1, to: 3,  label: "122", font: { strokeWidth: 10 } },
-    { from: 1, to: 2 , label: "12", font: { strokeWidth: 10 } },
-    { from: 2, to: 4 , label: "12", font: { strokeWidth: 10 } },
-    { from: 2, to: 5 , label: "12", font: { strokeWidth: 10 } }
-  ]);
+  // // An array of edges
+  // const edges = new DataSet([
+  //   { from: 1, to: 3,  label: "122", font: { strokeWidth: 10 } },
+  //   { from: 1, to: 2 , label: "12", font: { strokeWidth: 10 } },
+  //   { from: 2, to: 4 , label: "12", font: { strokeWidth: 10 } },
+  //   { from: 2, to: 5 , label: "12", font: { strokeWidth: 10 } }
+  // ]);
 
-  const data = {
-    nodes,
-    edges
-  };
+  // const data = {
+  //   nodes,
+  //   edges
+  // };
 
-  const options = {};
-
+  const options = {}
+  
   useEffect(
     () => {
       domNode.current.style.height = '85vh';
@@ -61,10 +62,19 @@ const Graphs = () => {
       domNode.current.style.outline = 'none !important'; 
       domNode.current.style.margin = '20px auto';
       domNode.current.style.tapHighlighColor = "rgba(255, 255, 255, 0)";
-      console.log(domNode.current);
+      
+      console.log(edges);
+      
+      const node = new DataSet(nodes);
+      const edge = new DataSet(edges);
+    
+    const data = {
+      "nodes": node,
+      "edges": edge
+    }
       network.current = new Network(domNode.current, data, options);
     },
-    [domNode, network, data, options]
+    [domNode, network, edges, options]
   );
 
   useEffect(() => {
@@ -108,8 +118,7 @@ const Graphs = () => {
       }
     }
     setGraphs(graph);
-    console.log(graphs);
-
+   
     let node = [];
     let set = new Set();
 
@@ -126,27 +135,32 @@ const Graphs = () => {
       obj.id = i;
       obj.label = e;
       node.push(obj);  
-      map[e] = i;
+      map.set(e, i);
       i++;
     })
 
-    // { from: 1, to: 3,  label: "122", font: { strokeWidth: 10 } },
-
+    
+    
     let edge = [];
+    
     if(graph[0].length == 2) {
-      let obj = {
-
-      }
+      let t = 1;
       graph.forEach(e => {
+        let obj = {
+
+        }
         obj.from = map.get(e[0]);
         obj.to = map.get(e[1]);
         obj.font = {
           strokeWidth: 10
         }
+        obj.id = t;
+        t++;
         edge.push(obj);
       })
     }
     else {
+      let t = 1;
       graph.forEach(e => {
         let obj = {
 
@@ -158,12 +172,16 @@ const Graphs = () => {
           obj.font = {
             strokeWidth: 10
           }
+          obj.id = t;
+          t++;
           edge.push(obj);
         })
       })
     }
 
-    console.log(edge);
+    setEdges(edge);
+    setNodes(node);
+
   }, [])
 
 
